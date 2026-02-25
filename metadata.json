@@ -1,0 +1,7 @@
+{
+  "name": "MBCC - Expert Forage & Fonçage",
+  "description": "Spécialiste en forage dirigé et fonçage de conduite. Solutions d'ingénierie MBCC pour infrastructures durables.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
