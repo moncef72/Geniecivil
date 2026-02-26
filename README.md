@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# MBCC - Deployment Guide
 
-# Run and deploy your AI Studio app
+This project is ready to be deployed to **Vercel**.
 
-This contains everything you need to run your app locally.
+## Prerequisites
 
-View your app in AI Studio: https://ai.studio/apps/drive/1GnCwSMQTDXUTUk2_G06Gqlr0DVozwpFA
+1.  A [Vercel](https://vercel.com) account.
+2.  The [Vercel CLI](https://vercel.com/download) installed (optional, you can also deploy via GitHub).
 
-## Run Locally
+## Environment Variables
 
-**Prerequisites:**  Node.js
+You **must** set the following environment variable in your Vercel project dashboard:
 
+-   `GEMINI_API_KEY`: Your Google Gemini API key.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deployment Steps
+
+### Option 1: Via Vercel Dashboard (Recommended)
+
+1.  Push your code to a GitHub, GitLab, or Bitbucket repository.
+2.  Import the project into Vercel.
+3.  Vercel will automatically detect the Vite configuration.
+4.  Add the `GEMINI_API_KEY` in the **Environment Variables** section.
+5.  Click **Deploy**.
+
+### Option 2: Via Vercel CLI
+
+1.  Run `vercel` in the root directory.
+2.  Follow the prompts to link the project.
+3.  Add the environment variable when prompted or via the dashboard.
+4.  Run `vercel --prod` for the final deployment.
+
+## Configuration Details
+
+-   **Build Command:** `npm run build`
+-   **Output Directory:** `dist`
+-   **Framework Preset:** Vite
